@@ -1,0 +1,132 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #b7bdf8 !important;
+  --ifm-color-primary-dark: #a5aaf0 !important;
+  --ifm-color-primary-darker: #9498e8 !important;
+  --ifm-color-primary-darkest: #7a7ecd !important;
+  --ifm-color-primary-light: #c4c9fa !important;
+  --ifm-color-primary-lighter: #d1d6fb !important;
+  --ifm-color-primary-lightest: #e2e5fd !important;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1) !important;
+  --ifm-color-primary: #b4befe !important;
+  --ifm-color-secondary: #cdd6f4 !important;
+  --ifm-color-success: #a6e3a1 !important;
+  --ifm-color-info: #89dceb !important;
+  --ifm-color-warning: #f9e2af !important;
+  --ifm-color-danger: #f38ba8 !important;
+  --ifm-color-primary-dark: rgb(48, 108, 206) !important;
+  --ifm-color-primary-darker: rgb(45, 102, 195) !important;
+  --ifm-color-primary-darkest: rgb(37, 84, 160) !important;
+  --ifm-color-primary-light: rgb(83, 140, 233) !important;
+  --ifm-color-primary-lighter: rgb(114, 161, 237) !important;
+  --ifm-color-primary-lightest: rgb(154, 188, 242) !important;
+  --ifm-color-primary-contrast-background: rgb(235, 242, 252) !important;
+  --ifm-color-primary-contrast-foreground: rgb(16, 36, 69) !important;
+  --ifm-color-secondary-dark: rgb(212, 213, 216) !important;
+  --ifm-color-secondary-darker: rgb(200, 201, 204) !important;
+  --ifm-color-secondary-darkest: rgb(164, 166, 168) !important;
+  --ifm-color-secondary-light: rgb(238, 240, 242) !important;
+  --ifm-color-secondary-lighter: rgb(241, 242, 245) !important;
+  --ifm-color-secondary-lightest: rgb(245, 246, 248) !important;
+  --ifm-color-secondary-contrast-background: rgb(253, 253, 254) !important;
+  --ifm-color-secondary-contrast-foreground: rgb(71, 71, 72) !important;
+  --ifm-color-success-dark: rgb(0, 148, 0) !important;
+  --ifm-color-success-darker: rgb(0, 139, 0) !important;
+  --ifm-color-success-darkest: rgb(0, 115, 0) !important;
+  --ifm-color-success-light: rgb(38, 178, 38) !important;
+  --ifm-color-success-lighter: rgb(77, 191, 77) !important;
+  --ifm-color-success-lightest: rgb(128, 210, 128) !important;
+  --ifm-color-success-contrast-background: rgb(230, 246, 230) !important;
+  --ifm-color-success-contrast-foreground: rgb(0, 49, 0) !important;
+  --ifm-color-info-dark: rgb(76, 179, 212) !important;
+  --ifm-color-info-darker: rgb(71, 169, 201) !important;
+  --ifm-color-info-darkest: rgb(59, 139, 165) !important;
+  --ifm-color-info-light: rgb(110, 207, 239) !important;
+  --ifm-color-info-lighter: rgb(135, 216, 242) !important;
+  --ifm-color-info-lightest: rgb(170, 227, 246) !important;
+  --ifm-color-info-contrast-background: rgb(238, 249, 253) !important;
+  --ifm-color-info-contrast-foreground: rgb(25, 60, 71) !important;
+  --ifm-color-warning-dark: rgb(235, 213, 165) !important;
+  --ifm-color-warning-darker: rgb(222, 201, 156) !important;
+  --ifm-color-warning-darkest: rgb(185, 168, 130) !important;
+  --ifm-color-warning-light: rgb(252, 236, 196) !important;
+  --ifm-color-warning-lighter: rgb(253, 242, 209) !important;
+  --ifm-color-warning-lightest: rgb(254, 247, 224) !important;
+  --ifm-color-warning-contrast-background: rgb(255, 251, 240) !important;
+  --ifm-color-warning-contrast-foreground: rgb(79, 61, 38) !important;
+  --ifm-color-danger-dark: rgb(220, 125, 151) !important;
+  --ifm-color-danger-darker: rgb(198, 113, 137) !important;
+  --ifm-color-danger-darkest: rgb(156, 89, 108) !important;
+  --ifm-color-danger-light: rgb(246, 167, 187) !important;
+  --ifm-color-danger-lighter: rgb(250, 188, 204) !important;
+  --ifm-color-danger-lightest: rgb(254, 216, 225) !important;
+  --ifm-color-danger-contrast-background: rgb(255, 232, 237) !important;
+  --ifm-color-danger-contrast-foreground: rgb(77, 21, 34) !important;
+  --ifm-color-white: #cdd6f4 !important;
+  --ifm-color-black: #1e1e2e !important;
+  --ifm-color-gray-100: #cdd6f4 !important;
+  --ifm-color-gray-200: #bac2de !important;
+  --ifm-color-gray-300: #9399b2 !important;
+  --ifm-color-gray-400: #7f849c !important;
+  --ifm-color-gray-500: #6c7086 !important;
+  --ifm-color-gray-600: #585b70 !important;
+  --ifm-color-gray-700: #45475a !important;
+  --ifm-color-gray-800: #313244 !important;
+  --ifm-color-gray-900: #1e1e2e !important;
+  --ifm-color-gray-1000: #181825 !important;
+  --ifm-color-gray-1100: #11111b !important;
+  --ifm-font-size-base: 20px;
+}
+
+/* Для режима "тёмная тема" создадим более яркие оттенки */
+[data-theme='dark'] {
+  --ifm-color-primary: #b7bdf8;
+  --ifm-color-primary-dark: #a1a7f0;
+  --ifm-color-primary-darker: #8f95e0;
+  --ifm-color-primary-darkest: #7b80c7;
+  --ifm-color-primary-light: #c6cbfa;
+  --ifm-color-primary-lighter: #d6dafb;
+  --ifm-color-primary-lightest: #e6e8fd;
+  --docusaurus-highlighted-code-line-bg: rgb(147, 153, 178, 0.3) !important;
+  --ifm-color-scheme: dark !important;
+
+  --ifm-background-color: #202438 !important;
+  --ifm-background-surface-color: #1e1e2e!important;
+  --ifm-footer-background-color: #1e1e2e!important;
+
+  --ifm-hover-overlay: rgb(205, 214, 244, 0.05) !important;
+
+  --ifm-color-content: #cdd6f4 !important;
+  --ifm-color-content-secondary: #a6adc8 !important;
+
+  --ifm-code-background: rgb(49, 50, 68, 0.1) !important;
+
+  --ifm-scrollbar-track-background-color: #313244 !important;
+  --ifm-scrollbar-thumb-background-color: #bac2de !important;
+  --ifm-scrollbar-thumb-hover-background-color: #cdd6f4 !important;
+
+  --ifm-table-stripe-background: rgba(255, 255, 255, 0.07) !important;
+
+  --ifm-color-primary-contrast-background: rgb(30, 30, 46) !important;
+  --ifm-color-primary-contrast-foreground: rgb(180, 190, 254) !important;
+  --ifm-color-secondary-contrast-background: rgb(30, 30, 46) !important;
+  --ifm-color-secondary-contrast-foreground: rgb(137, 180, 250) !important;
+  --ifm-color-success-contrast-background: rgb(30, 30, 46) !important;
+  --ifm-color-success-contrast-foreground: rgb(148, 226, 213) !important;
+  --ifm-color-info-contrast-background: rgb(30, 30, 46) !important;
+  --ifm-color-info-contrast-foreground: rgb(116, 199, 236) !important;
+  --ifm-color-warning-contrast-background: rgb(30, 30, 46) !important;
+  --ifm-color-warning-contrast-foreground: rgb(249, 226, 175) !important;
+  --ifm-color-danger-contrast-background: rgb(30, 30, 46) !important;
+  --ifm-color-danger-contrast-foreground: rgb(243, 139, 168) !important;
+}
+
+.footer {
+  --ifm-footer-background-color: #1e1e2e !important;
+}
