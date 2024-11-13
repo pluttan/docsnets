@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocsnets=self.webpackChunkdocsnets||[]).push([[5573],{8758:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/docsnets/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
