@@ -29,13 +29,13 @@ const config = {
             'classic',
             {
                 docs: {
-                    id: 'lectures', // Unique ID for the first docs instance
-                    path: 'docs/lectures', // Path to the first set of docs
-                    routeBasePath: 'lectures', // URL path for the first set
-                    sidebarPath: './sidebars.js' // Path to the sidebar configuration
+                    id: 'lectures', 
+                    path: 'docs/lectures', 
+                    routeBasePath: 'lectures', 
+                    sidebarPath: './slidebars/lectures.js' 
                 },
                 theme: {
-                    customCss: './src/css/custom.css' // Path to the custom CSS
+                    customCss: './src/css/custom.css'
                 }
             }
         ],
@@ -43,10 +43,10 @@ const config = {
             'classic',
             {
                 docs: {
-                    id: 'labs', // Unique ID for the second docs instance
-                    path: 'docs/labs', // Path to the second set of docs
-                    routeBasePath: 'labs', // URL path for the second set
-                    sidebarPath: './sidebars.js' // Path to the sidebar configuration (can be the same or different)
+                    id: 'labs',
+                    path: 'docs/labs',
+                    routeBasePath: 'labs',
+                    sidebarPath: './slidebars/labs.js'
                 },
                 blog: false,
                 pages: false,
@@ -54,7 +54,7 @@ const config = {
                 sitemap: false,
                 theme: {
                     id: 'labs',
-                    customCss: './src/css/custom.css' // Path to the custom CSS
+                    customCss: './src/css/custom.css'
                 }
             }
         ],
@@ -79,10 +79,10 @@ const config = {
         },
         footer: {
             style: 'dark',
-            copyright: `На счет правкок, дополнений, предложений (допсихологической помощи) пишите <a href='https://github.com/pluttan' style={{'color':'red'}}>мне</a>.`
+            copyright: `На счет правкок, дополнений, предложений (допсихологической помощи) пишите <a href='https://github.com/pluttan'>мне</a>.`
         },
         prism: {
-            theme: prismThemes.github,
+            theme: prismThemes.catppuccin,
             darkTheme: prismThemes.catppuccin
         }
     }

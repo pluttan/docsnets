@@ -130,3 +130,32 @@
 .footer {
   --ifm-footer-background-color: #1e1e2e !important;
 }
+
+table {
+  width: auto; /* Автоматическая ширина, чтобы таблица подстраивалась под содержимое */
+  border-collapse: separate; /* Используем separate вместо collapse для корректного скругления */
+  border-spacing: 0; /* Убираем зазоры между ячейками */
+  border: 2px solid #b7bdf89f !important;
+  border-radius: 10px; /* Скругление углов */
+  overflow: hidden; /* Обрезает внутренние элементы по границе */
+  margin: 1.5em auto; /* Центрируем таблицу и задаем отступы сверху и снизу */
+  display: table; /* Убираем inline-table, чтобы таблица занимала нужное пространство */
+  table-layout: auto;
+  box-shadow: 10px 10px 10px #1e1e2e6f;
+}
+
+th, td {
+  border: 1px solid #b7bdf86f !important; /* Внутренняя граница ячеек */
+  padding: 8px;
+  text-align: left;
+  background-color: #1e1e2e !important;
+}
+
+tbody, tr {
+  width: auto; /* Удалите фиксированную ширину с tbody и tr */
+}
+
+
+img {
+  width: 100%;
+}
