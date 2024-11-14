@@ -1,5 +1,6 @@
 import PDU from '../../../../static/lib/pdu'
 import Mermaid from '../../../../static/lib/Mermaid'
+import IframeComponent from '../../../../static/lib/iframe'
 
 # IPv4
 
@@ -103,7 +104,7 @@ NAT подменяет IP при выходе из локальной сети. 
 
 ## Заголовок
 
-<PDU maxCellSize={32} data={[
+<PDU maxCellSize={32} name={'IPv4 Заголовок'} data={[
     { 
         size: 4, 
         name: "Номер версии", 
@@ -127,7 +128,7 @@ NAT подменяет IP при выходе из локальной сети. 
     { 
         size: 16, 
         name: "ID пакета", 
-        desc: `Поток бьется на фрагменты, если в канал связи не входит`
+        desc: `Поток бьется на фрагменты, если в канал связи не входит. Сюда вписывается ID такого фрагмента.`
     },
     { 
         size: 3, 
@@ -189,3 +190,7 @@ NAT подменяет IP при выходе из локальной сети. 
 
 - Настройка вручную 
 - Использование [DHCP](./dhcp.md)
+
+
+## [Карточки](https://app.quenti.io/cm3guvwhf003cmh0c2tsoch9b)
+<IframeComponent link="https://app.quenti.io/cm3guvwhf003cmh0c2tsoch9b"/>

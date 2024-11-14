@@ -31,6 +31,7 @@ const sidebars = {
           items: [
             'prot/L3/ip',
             'prot/L3/dhcp',
+            'prot/L3/icmp',
           ],
         },
       ],
