@@ -1,6 +1,6 @@
 import React from 'react';
 import HoverText from './hoverText';
-const PDU = ({ maxCellSize, data }) => {
+const PDU = ({ maxCellSize, data, name }) => {
     let sizeCol = 100 / maxCellSize;
 
     // Функция для расчета объединения ячеек
@@ -39,7 +39,9 @@ const PDU = ({ maxCellSize, data }) => {
     };
 
     const rows = buildRows(data, maxCellSize);
-    console.log(data)
+    let dataset = name+': Нарисуйте\t\n';
+    data.forEach((item, index) => {dataset+=name+': '+item.name+'\t'+item.desc+'\n'})
+    console.log(dataset)
 
 
     return (
@@ -74,7 +76,8 @@ const PDU = ({ maxCellSize, data }) => {
                                     <span
                                     style={{
                                         'width': String(sizeCol * cell.size) + '%',
-                                        'height': '100%'
+                                        'height': '100%',
+                                        'padding': '15px',
                                     }}
                                     >
                                         {cell.name}
@@ -89,7 +92,7 @@ const PDU = ({ maxCellSize, data }) => {
         </table>
         <ul>
             {
-            data.map((item, index) => (<li key={index}><b>{item.name}</b>: {item.desc}</li>))
+            data.map((item, index) => (item.desc ?<li key={index}><b>{item.name}</b>: {item.desc}</li>:<div/>))
             }
         </ul>
         </div>
