@@ -25,6 +25,16 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'Канальный уровень',
+          collapsed: true,
+          link: {type: 'doc', id: 'prot/L3/README'},
+          items: [
+            'prot/L2/stp',
+            'prot/L2/vtp'
+          ],
+        },
+        {
+          type: 'category',
           label: 'Сетевой уровень',
           collapsed: true,
           link: {type: 'doc', id: 'prot/L3/README'},
@@ -32,6 +42,9 @@ const sidebars = {
             'prot/L3/ip',
             'prot/L3/dhcp',
             'prot/L3/icmp',
+            'prot/L3/arp',
+            'prot/L3/ipv6',
+            'prot/L3/rip',
           ],
         },
       ],
