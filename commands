@@ -1,0 +1,246 @@
+no
+
+en 
+conf t
+in r f0/0-1
+no sh
+ex
+in f0/0
+ip ad 1.1.1.2 255.255.255.0
+ex
+r e 1
+
+---- 
+
+no
+
+en 
+conf t
+in r f0/0-1
+no sh
+ex
+in f0/0
+ip ad 1.1.2.2 255.255.255.0
+ex
+r e 1
+
+---- 
+
+no
+
+en 
+conf t
+in r f0/0-1
+no sh
+ex
+in f0/0
+ip ad 1.2.1.2 255.255.255.0
+ex
+r e 1
+
+---- 
+
+no
+
+en 
+conf t
+in r f0/0-1
+no sh
+ex
+in f0/0
+ip ad 1.2.2.2 255.255.255.0
+ex
+r e 1
+
+---- 
+
+no
+
+en 
+conf t
+in r f0/0-1
+no sh
+ex
+in f0/0
+ip ad 2.1.1.2 255.255.255.0
+ex
+r e 1
+
+---- 
+
+no
+
+en 
+conf t
+in r f0/0-1
+no sh
+ex
+in f0/0
+ip ad 2.1.2.2 255.255.255.0
+ex
+r e 1
+
+---- 
+
+no
+
+en 
+conf t
+in r f0/0-1
+no sh
+ex
+in f0/0
+ip ad 2.2.1.2 255.255.255.0
+ex
+r e 1
+
+---- 
+
+no
+
+en 
+conf t
+in r f0/0-1
+no sh
+ex
+in f0/0
+ip ad 2.2.2.2 255.255.255.0
+ex
+r e 1
+
+---- 
+
+no
+
+en 
+conf t
+in r f0/0-1,f1/0
+no sh
+ex
+in f0/0
+ip ad 1.1.1.1 255.255.255.0
+ex
+in f0/1
+ip ad 1.1.2.1 255.255.255.0
+ex
+in f1/0
+ip ad 1.1.0.2 255.255.255.0
+ex
+r e 1
+
+---- 
+
+no
+
+en 
+conf t
+in r f0/0-1,f1/0
+no sh
+ex
+in f0/0
+ip ad 1.2.1.1 255.255.255.0
+ex
+in f0/1
+ip ad 1.2.2.1 255.255.255.0
+ex
+in f1/0
+ip ad 1.2.0.2 255.255.255.0
+ex
+r e 1
+
+---- 
+
+no
+
+en 
+conf t
+in r f0/0-1,f1/0
+no sh
+ex
+in f0/0
+ip ad 2.1.1.1 255.255.255.0
+ex
+in f0/1
+ip ad 2.1.2.1 255.255.255.0
+ex
+in f1/0
+ip ad 2.1.0.2 255.255.255.0
+ex
+r e 1
+
+---- 
+
+no
+
+en 
+conf t
+in r f0/0-1,f1/0
+no sh
+ex
+in f0/0
+ip ad 2.2.1.1 255.255.255.0
+ex
+in f0/1
+ip ad 2.2.2.1 255.255.255.0
+ex
+in f1/0
+ip ad 2.2.0.2 255.255.255.0
+ex
+r e 1
+
+---- 
+
+no
+
+en 
+conf t
+in r f0/0-1,f1/0
+no sh
+ex
+in f0/0
+ip ad 1.1.0.1 255.255.255.0
+ex
+in f0/1
+ip ad 1.2.0.1 255.255.255.0
+ex
+in f1/0
+ip ad 1.0.0.2 255.255.255.0
+ex
+r e 1
+
+---- 
+
+no
+
+en 
+conf t
+in r f0/0-1,f1/0
+no sh
+ex
+in f0/0
+ip ad 2.1.0.1 255.255.255.0
+ex
+in f0/1
+ip ad 2.2.0.1 255.255.255.0
+ex
+in f1/0
+ip ad 2.0.0.2 255.255.255.0
+ex
+r e 1
+
+---- 
+
+no
+
+en 
+conf t
+in r f0/0-1
+no sh
+ex
+in f0/0
+ip ad 1.0.0.1 255.255.255.0
+ex
+in f0/1
+ip ad 2.0.0.1 255.255.255.0
+ex
+r e 1

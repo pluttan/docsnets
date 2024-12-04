@@ -51,7 +51,7 @@ RIP использует несколько таймеров для управл
 ## Пакет
 
 ### RIP 1
-<PDU maxCellSize={32} name={'IPv4 Заголовок'} data={[
+<PDU maxCellSize={32} name={'RIP 1 Пакет'} data={[
     { 
         size: 8, 
         name: "Комманда", 
@@ -96,7 +96,7 @@ RIP использует несколько таймеров для управл
 ]} />
 
 ### RIP 2
-<PDU maxCellSize={32} name={'IPv4 Заголовок'} data={[
+<PDU maxCellSize={32} name={'RIP 2 Пакет'} data={[
     { 
         size: 8, 
         name: "Комманда", 
@@ -138,4 +138,42 @@ RIP использует несколько таймеров для управл
         size: 32, 
         name: "Метрика"
     },
+]} />
+
+### RIPng
+
+<PDU maxCellSize={32} name={'RIPng Пакет'} data={[
+    { 
+        size: 8, 
+        name: "Комманда", 
+        desc: `Функционал (запрос, ответ)`
+    },
+    { 
+        size: 8, 
+        name: "Версия", 
+        desc: `Версия RIPng`
+    },
+    { 
+        size: 16, 
+        name: "-"
+    },
+    { 
+        size: 32, 
+        name: "IPv6 Prefix"
+    },
+    { 
+        size: 16, 
+        name: "Тег маршрута",
+        desc: `Внутренний или внешний маршрут`
+    },
+    { 
+        size: 8, 
+        name: "Длина префикса", 
+        desc: `Маска`
+    },
+    { 
+        size: 8, 
+        name: "Метрика", 
+        desc: `Кол-во хопов`
+    }
 ]} />

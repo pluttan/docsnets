@@ -11,8 +11,8 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       
       <div className="container">
-      <img src='icons/dnicon.png'/>
-      <p style={{'text-align': 'left', 'font-size': '1.7em', 'font-weight': '600'}}>
+      <img style={{'width': '20em'}} src='icons/dnicon.png'/>
+      <p style={{'text-align': 'left', 'font-size': '1.3em', 'font-weight': '600'}}>
       Привет! <br/> 
       Это проект одного из создателей ботвы. Во время семестра с сетями я думал 
       как бы организовать теорию так, чтобы ее было удобно читать. В итоге пришел к выводу, что 
@@ -20,16 +20,16 @@ function HomepageHeader() {
       сетям (как минимум для ИУ6).<br/> 
       Проект "Сети для самых маленьких" уже стал культовым, но подача материала в нем не 
       всегда последовательная и структурированная. Поэтому я решил придерживаться 
-      аналогичного формата, но изложить все в соответствии с теорией Елизаветы Алексеевны.<br/> 
+      аналогичного формата, но изложить все в соответствии с теорией нашего курса.<br/> 
       Приятного чтения!
       </p>
-        <div className={styles.buttons}>
+        <div  style={{'max-width':'80vw'}}>
           <Link
             className="button button--secondary button--lg"
             to="/lectures">
             Лекции
           </Link>
-          <div style={{'padding-left':'10px'}}/>
+          <div style={{'padding-left':'10px', 'padding-bottom':'10px'}}/>
           <Link
             className="button button--secondary button--lg"
             to="/labs">
