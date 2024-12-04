@@ -82,6 +82,13 @@
   --ifm-color-gray-1000: #181825 !important;
   --ifm-color-gray-1100: #11111b !important;
   --ifm-font-size-base: 20px;
+  /* --ifm-navbar-background-color: #8f95e0!important; */
+}
+
+[data-theme='light'] {
+  --ifm-color-primary: #7287fd !important;
+  --ifm-navbar-link-hover-color: #7287fd;
+
 }
 
 /* Для режима "тёмная тема" создадим более яркие оттенки */
@@ -142,6 +149,7 @@ table {
   display: table; /* Убираем inline-table, чтобы таблица занимала нужное пространство */
   table-layout: auto;
   box-shadow: 10px 10px 10px #1e1e2e6f;
+  color: #cdd6f4;
 }
 
 th, td {
