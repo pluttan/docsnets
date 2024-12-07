@@ -86,13 +86,43 @@
 }
 
 [data-theme='light'] {
+  --table-shadow: 10px 10px 10px #1e1e2e6f;
+
   --ifm-color-primary: #7287fd !important;
   --ifm-navbar-link-hover-color: #7287fd;
 
 }
+.img_ev3q{
+  background-color: #1e1e2e !important;
+  border: 2px solid #b7bdf86f !important;
+  border-radius: 10px;
+  box-shadow: var(--table-shadow);
+  padding: 10px;
+  margin: 10px;
+  overflow: hidden; 
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.img_ev3q::before {
+  content: '';
+  position: absolute;
+  top: -10px; /* Размер "паддинга" */
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  /* padding: 10px;
+  width: 100vw;
+  height: 100vh; */
+  background: #1a1a1a; /* Цвет фона для отступов */
+  border-radius: 20px; /* Увеличенный радиус, чтобы учитывать паддинги */
+  z-index: -1; /* Отправляем за изображение */
+}
 
 /* Для режима "тёмная тема" создадим более яркие оттенки */
 [data-theme='dark'] {
+  --table-shadow: 10px 10px 10px #b7bdf82f;
+
   --ifm-color-primary: #b7bdf8;
   --ifm-color-primary-dark: #a1a7f0;
   --ifm-color-primary-darker: #8f95e0;
@@ -135,7 +165,8 @@
 }
 
 .footer {
-  --ifm-footer-background-color: #1e1e2e !important;
+  --ifm-footer-background-color: var(--ifm-navbar-background-color) !important;
+  color: var(--ifm-font-color-base);
 }
 
 table {
@@ -148,7 +179,7 @@ table {
   margin: 1.5em auto; /* Центрируем таблицу и задаем отступы сверху и снизу */
   display: table; /* Убираем inline-table, чтобы таблица занимала нужное пространство */
   table-layout: auto;
-  box-shadow: 10px 10px 10px #1e1e2e6f;
+  box-shadow: var(--table-shadow);
   color: #cdd6f4;
 }
 

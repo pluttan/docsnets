@@ -25,13 +25,15 @@ const sidebars = {
           link: {type: 'doc', id: 'switch/README'},
           items: [
             'switch/cliexec',
+            'switch/priexec',
           ]
         },
         'icmp&arp',
         'arp&sm',
         'vlansw',
         'stp',
-        'vtp'
+        'vtp', 
+        'dhcp'
       ]
 };
 
