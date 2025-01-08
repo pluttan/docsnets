@@ -33,7 +33,18 @@ const sidebars = {
         'vlansw',
         'stp',
         'vtp', 
-        'dhcp'
+        'rtvlan',
+        'dhcp',
+        {
+          type: 'category',
+          label: 'ЧаВо',
+          collapsed: true,
+          // link: {type: 'doc', id: 'switch/README'},
+          items: [
+            'questions/lab1',
+            'questions/lab2'
+          ]
+        },
       ]
 };
 
