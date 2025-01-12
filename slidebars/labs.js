@@ -45,6 +45,15 @@ const sidebars = {
             'questions/lab2'
           ]
         },
+        {
+          type: 'category',
+          label: 'Экзамен',
+          collapsed: true,
+          // link: {type: 'doc', id: 'switch/README'},
+          items: [
+            'exam/top1',
+          ]
+        },
       ]
 };
 
