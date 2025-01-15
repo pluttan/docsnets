@@ -8,14 +8,6 @@ import {Table, ARPTable, MACTable} from './top1/tables'
 import {Topology} from './top1/topology'
 import {connect, devices} from './top1'
 
-<Package data={[
-{label:'L5', Destination: "192.168.1.100", Source: "", Protocol: "TCP", Data: "Some data1", FCS: "0x1234" },
-{label:'L4', Destination: "10.0.0.5", Protocol: "UDP", Data: "More data2", FCS: "0x5678" },
-{label:'L3', Destination: "172.16.0.2", Source: "172.16.0.1", Protocol: "HTTP", Data: "Even more data3", FCS: "0x9ABC" },
-{label:'L2', Destination: "192.168.1.102", Source: "192.168.1.3", Protocol: "TCP", Data: "Some data4", FCS: "0x1234" },
-]} />
-<Package data={p.OSPFHello('A1', '1.1')}/>
-
 # Билет 0
 
 ## Топология
