@@ -3,41 +3,49 @@ import React, { useState, useRef, useEffect } from 'react';
 // --- Styles ---
 const commonStyles = {
     cellStyle: {
-        cursor: 'pointer'
+        cursor: 'pointer',
+        padding: '8px',
+        textAlign: 'left',
     },
     proSt: {
         color: '#b7bdf8',
         margin: '0px',
-        fontStyle: 'italic'
+        fontStyle: 'italic',
     },
-     tableWrapper:{
-          maxWidth: '100%', // add max width to prevent overflow
+    tableWrapper: {
+        width: '100%',
         overflowX: 'auto',
+        padding: '0',
+        margin: '0',
     },
     tableStyle: {
-        margin: '10px',
-        width: '50%',
-    },
-    tableT: {
         width: '100%',
+        borderCollapse: 'collapse',
+        display: 'table', // Keep table display behavior
     },
-    tableWrapperStyle: {
+     tableT: {
+        width: '100%',
+        padding: 0,
+        margin: 0,
+    },
+     tableWrapperStyle: {
+        width: '100%',
         tableLayout: 'auto',
         border: '0px',
         borderRadius: '0px',
         boxShadow: 'none',
-        userSelect: 'none'
+        userSelect: 'none',
+        padding: '0',
+        margin: '0',
     },
     tableProt: {
-        width: '7vw',
-        display: 'block',
+        width: 'auto',
         paddingTop: '2vh',
         backgroundColor: 'transparent',
         border: '0px',
     },
-    tableOut: {
-         maxWidth: '100%', // add max width to prevent overflow
-        width: '45vw',
+     tableOut: {
+        width: '100%',
         backgroundColor: 'transparent',
         border: '0px',
         padding: '0px',
@@ -46,9 +54,14 @@ const commonStyles = {
         textAlign: 'left',
         marginRight: '10px',
     },
-    subTableWrapperStyle: {
+     subTableWrapperStyle: {
         marginTop: '-1.5em',
         overflow: 'hidden',
+        width: '100%',
+    },
+    tableRowStyle: {
+        display: 'flex',
+        width: '100%'
     },
 };
 
@@ -100,32 +113,32 @@ function InteractiveTable({ cellsData, children, label, activeCells, onCellClick
     ));
 
     const targetId = targetCellKey ? Object.keys(cellsData).indexOf(targetCellKey) : -1;
-  
+
     return (
         <div style={commonStyles.tableT}>
+            <div
+                style={{ ...commonStyles.subTableWrapperStyle }}
+                ref={subTableRef}
+            >
+                {targetId === (activeCells && activeCells[nestedLevel]) && children}
+            </div>
             <div style={commonStyles.tableWrapper}>
-              <table style={commonStyles.tableWrapperStyle}>
-                <tbody>
-                    <tr ref={rowRef}>
+                <table style={commonStyles.tableWrapperStyle}>
+                    <tbody>
+                    <tr ref={rowRef} style={commonStyles.tableRowStyle}>
                         <td style={commonStyles.tableProt}>
                             {label && <div style={commonStyles.tableLabelStyle}>{label}</div>}
                         </td>
-                         <td style={commonStyles.tableOut}>
-                            <table style={commonStyles.tableStyle}>
-                                <tbody>
-                                    <tr>{cells}</tr>
-                                </tbody>
-                            </table>
+                        <td style={commonStyles.tableOut}>
+                        <table style={commonStyles.tableStyle}>
+                            <tbody>
+                            <tr>{cells}</tr>
+                            </tbody>
+                        </table>
                         </td>
                     </tr>
-                </tbody>
-              </table>
-             </div>
-            <div
-              style={{ ...commonStyles.subTableWrapperStyle, width: '50vw' }}
-                ref={subTableRef}
-            >
-               {targetId === (activeCells && activeCells[nestedLevel]) && children}
+                    </tbody>
+                </table>
             </div>
         </div>
     );
@@ -137,9 +150,9 @@ function InteractiveTableWrapper({ cellsData, label, children }) {
 
     useEffect(() => {
         const getInitialActiveCells = (children, level = 0) => {
-             const dataIndex = Object.keys(cellsData).indexOf(
-              Object.keys(cellsData).find(key => key === 'Data')
-             );
+            const dataIndex = Object.keys(cellsData).indexOf(
+                Object.keys(cellsData).find(key => key === 'Data')
+            );
 
             setInitialActiveCells(prev => ({ ...prev, [level]: dataIndex }));
 
