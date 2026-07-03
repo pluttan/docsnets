@@ -1,14 +1,9 @@
-![Header](header.png)
-
 <div align="center">
 
 # DocsNets
 
 **Конспекты лекций по компьютерным сетям и отчёты по лабораторным работам Cisco**
 
-[![License](https://img.shields.io/badge/license-MIT-2C2C2C?style=for-the-badge&labelColor=1E1E1E)](LICENSE)
-[![Docusaurus](https://img.shields.io/badge/docusaurus-3.6-2C2C2C?style=for-the-badge&logo=docusaurus&labelColor=1E1E1E)]()
-[![React](https://img.shields.io/badge/react-18-2C2C2C?style=for-the-badge&logo=react&labelColor=1E1E1E)]()
 
 </div>
 
@@ -27,7 +22,7 @@
 
 <div align="center">
 
-| Компонент | Technology |
+| Компонент | Технология |
 |-----------|------------|
 | Фреймворк | Docusaurus 3.6.1 (classic preset) |
 | Фронтенд | React 18, MDX, styled-components |
@@ -38,6 +33,15 @@
 
 </div>
 
+## ■ Как это работает
+
+```
+1. Контент пишется в MDX-файлах, организованных в два экземпляра документации Docusaurus — lectures и labs — каждый со своим сайдбаром.
+2. Пользовательские React-компоненты отрисовывают диаграммы Mermaid, формулы KaTeX и SVG из draw.io прямо внутри MDX-страниц.
+3. Интерактивные компоненты (таблицы PDU/протоколов, сворачиваемый текст, iframe) обогащают отдельные страницы.
+4. Docusaurus собирает сайт с русской локалью и тёмной темой по умолчанию, затем публикует на GitHub Pages.
+```
+
 ## ■ Скриншоты
 
 <div align="center">
@@ -47,7 +51,7 @@
 
 </div>
 
-## ■ Запуск
+## ■ Использование
 
 ```bash
 npm install
@@ -56,6 +60,6 @@ npm run build   # сборка для продакшена
 npm run deploy  # публикация на GitHub Pages
 ```
 
-## ■ License
+## ■ Лицензия
 
 MIT © [pluttan](https://github.com/pluttan)
